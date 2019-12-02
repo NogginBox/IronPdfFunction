@@ -39,7 +39,9 @@ namespace IronPdfFunction
 
             try
             {
+                // Errors on this line (but exception is not caught)
                 var pdf = renderer.RenderHtmlAsPdf(html);
+                
                 return new FileContentResult(pdf.BinaryData, "application/pdf");
             }
             catch (Exception e)
